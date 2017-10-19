@@ -2,19 +2,7 @@
 @import 'mixins';
 @import 'global';
 @import 'grid';
-
-
-
-
-/* ---- On load  ---- */
-
-body {
-    opacity: 0;
-    background-color: $light-grey;
-}
-
-
-
+@import 'hamburgers';
 
 
 /* ---- Lazy loader ---- */
@@ -28,9 +16,6 @@ body {
     opacity: 1;
     transition: opacity 300ms;
 }
-
-
-
 
 
 /* ---- curtain ---- */
@@ -76,7 +61,8 @@ body {
     z-index: 99;
     width: 100vw;
     height: auto; // display: flex;
-    // justify-content: center;
+    // justify-content: center
+
 }
 
 .menu {
@@ -150,8 +136,8 @@ body {
     }
     &.is-active {
         @include tablet {
-            >p,
-            h4 {
+            >h4,
+            h3 {
                 color: $white;
             }
             >.menu--items--item--logo--triangle {
@@ -160,7 +146,7 @@ body {
             }
         }
         @include mobile {
-            >p,
+            >h3,
             h4 {
                 color: $white;
             }
@@ -202,15 +188,6 @@ body {
     @include move(150ms,
     transform);
 
-    @include tablet {
-        font-size: 1.3rem;
-        line-height: 2.7rem;
-    }
-
-    @include mobile {
-        font-size: 1.3rem;
-        line-height: 2.7rem;
-    }
 
     &:hover {
         transform: scale(1.02);
@@ -252,13 +229,12 @@ body {
 .menu-lvl-1 {
     flex-wrap: nowrap;
     height: 55px;
-    @include move-in(650ms,
-    opacity);
-
+    @include move-in(650ms, opacity);
+    left: 0;
     @include tablet {
-
         opacity: 0;
         flex-wrap: wrap;
+        
 
         &.is-active {
             visibility: visible;
@@ -270,6 +246,7 @@ body {
     @include mobile {
         opacity: 0;
         flex-wrap: wrap;
+        
         &.is-active {
             visibility: visible;
             position: absolute;
@@ -283,16 +260,17 @@ body {
     visibility: hidden;
     padding-top: 0;
     padding-bottom: 0;
+    left: 0;
 
     @include tablet {
         visibility: hidden;
-        padding-top: 55px;
+        padding-top: 15vh;
         padding-bottom: 5vh;
     }
 
     @include mobile {
         visibility: hidden;
-        padding-top: 55px;
+        padding-top: 15vh;
         padding-bottom: 5vh;
     }
 }
@@ -300,9 +278,9 @@ body {
 .menu-lvl-2 {
     flex-wrap: nowrap;
     height: 55px;
-    @include move-in(650ms,
-    opacity);
+    @include move-in(650ms, opacity);
     opacity: 0;
+    
 
     &.is-active {
         visibility: visible;
@@ -312,6 +290,7 @@ body {
     @include tablet {
         opacity: 0;
         &.is-active {
+
             opacity: 1;
             visibility: visible;
             position: absolute;
@@ -331,6 +310,10 @@ body {
         }
     }
 }
+
+
+
+
 
 
 
