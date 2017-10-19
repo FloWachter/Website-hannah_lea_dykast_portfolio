@@ -25,6 +25,8 @@
 
     $m_el_1 = $('.js-menu-lvl-1');
     $m_el_2 = $('.js-menu-lvl-2');
+    $m_el_bg = $('.js-menu-bg');
+    $m_el_text = $('.menu--items--item'); 
 
         // burger -> js-menu-lvl-1
     $('.js-menu-burger').on('click', function(event) {
@@ -33,8 +35,12 @@
         if( $m_el_1.hasClass('is-active') || $m_el_2.hasClass('is-active')){
             $m_el_2.removeClass('is-active');
             $m_el_1.removeClass('is-active');
+            $m_el_bg.removeClass('is-active');
+            $m_el_text.removeClass('is-active');
         }else {
-            $m_el_1.toggleClass('is-active');
+            $m_el_1.addClass('is-active');
+            $m_el_bg.addClass('is-active');
+            $m_el_text.addClass('is-active');
         }
     });
 

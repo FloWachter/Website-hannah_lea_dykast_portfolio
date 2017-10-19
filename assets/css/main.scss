@@ -5,12 +5,14 @@
 
 
 
+
 /* ---- On load  ---- */
 
 body {
     opacity: 0;
     background-color: $light-grey;
 }
+
 
 
 
@@ -26,6 +28,7 @@ body {
     opacity: 1;
     transition: opacity 300ms;
 }
+
 
 
 
@@ -59,6 +62,7 @@ body {
         background-image: url("../images/triangle_mobile.svg");
     }
 }
+
 
 
 
@@ -101,10 +105,26 @@ body {
     @include shadow-1;
 
     @include tablet {
-    	height: 55px;
+        @include move(350ms,
+        all);
+        height: 55px;
+        opacity: 1;
+        &.is-active {
+            height: 100vh;
+            background-color: $black;
+            opacity: 0.88;
+        }
     }
     @include mobile {
-    	height: 55px;
+        @include move(350ms,
+        all);
+        height: 55px;
+        opacity: 1;
+        &.is-active {
+            height: 100vh;
+            background-color: $black;
+            opacity: 0.88;
+        }
     }
 }
 
@@ -128,9 +148,50 @@ body {
             }
         }
     }
+    &.is-active {
+        @include tablet {
+            >p,
+            h4 {
+                color: $white;
+            }
+            >.menu--items--item--logo--triangle {
+            	 border-color: transparent transparent $white transparent;
+   		 		_border-color: #000000 #000000 $white #000000;
+            }
+        }
+        @include mobile {
+            >p,
+            h4 {
+                color: $white;
+            }
+            >.menu--items--item--logo--triangle {
+            	 border-color: transparent transparent $white transparent;
+   		 		_border-color: #000000 #000000 $white #000000;
+            }
+        }
+    }
 }
 
-.menu--items--item--logo {}
+.menu--items--item--logo {
+    text-align: center;
+}
+
+.menu--items--item--logo--triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 17.3px 10px;
+    border-color: transparent transparent $grey transparent;
+    line-height: 0px;
+    _border-color: #000000 #000000 $grey #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+}
+
+
+
+
+
 
 .menu--items--item--tittle {}
 
@@ -138,22 +199,23 @@ body {
 
 .menu--items--item--link {
     white-space: nowrap;
-    @include move(150ms, transform);
-    
+    @include move(150ms,
+    transform);
+
     @include tablet {
-        font-size: 1.3rem ;
-		line-height: 2.7rem;
+        font-size: 1.3rem;
+        line-height: 2.7rem;
     }
-    
+
     @include mobile {
-        font-size: 1.3rem ;
-		line-height: 2.7rem;
+        font-size: 1.3rem;
+        line-height: 2.7rem;
     }
 
     &:hover {
-    	transform:scale(1.02);
-    	cursor: pointer;
-    	font-weight: 800;
+        transform: scale(1.02);
+        cursor: pointer;
+        font-weight: 800;
     }
 }
 
@@ -229,9 +291,9 @@ body {
     }
 
     @include mobile {
-     	visibility: hidden;
+        visibility: hidden;
         padding-top: 55px;
-        padding-bottom: 5vh;   
+        padding-bottom: 5vh;
     }
 }
 
@@ -241,10 +303,10 @@ body {
     @include move-in(650ms,
     opacity);
     opacity: 0;
-    
+
     &.is-active {
         visibility: visible;
-    	opacity: 1;
+        opacity: 1;
     }
 
     @include tablet {
@@ -271,6 +333,7 @@ body {
 }
 
 
+
 /* ---- Main ---- */
 
 .main {
@@ -279,20 +342,17 @@ body {
     height: 100%;
     padding-top: 55px;
     background-color: $light-grey;
-    
 }
 
 .main--container {
     position: relative;
     display: none; // connecten to curton 
-
     //max-width: $screen-width;
     //margin: 0 auto;
     height: 100%;
     padding-top: 21px;
 
-   &.is-active {
-   		display: block;
-   }
-
+    &.is-active {
+        display: block;
+    }
 }
