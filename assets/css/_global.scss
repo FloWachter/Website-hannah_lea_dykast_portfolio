@@ -1,0 +1,133 @@
+/* --- colors --- */
+$black: #1c1c1b;
+$white: #fff;
+
+$grey: #cbcccb;
+$light-grey: #F8F8F8;
+$light-grey: #f5f4f3;
+
+
+/* --- Fonts --- */
+$font-base: 13px;// fliesstext v1->11px
+$font: "TheSans_400", sans-serif;//semilight
+// $font-sec: "TheSans_600", sans-serif;//semibold
+
+
+/* ---- Layout -----*/
+// $vertical-space: 1.27em;
+// $vertical-space-mobile: 2.3em;
+
+$column-gap: 1.6153rem; //45px;
+$column-gap-mobile: 1.6153rem; //24px;
+$screen-width: 1280px;
+
+
+/* ---- Format -----*/
+h1, h2, h3, h4, p, strong, a ,ol, li, ul, label, input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea {
+	color: $black;
+	margin: 0;
+	padding: 0;
+
+}
+
+p, h3,label, input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea  {
+	font-family: $font;
+
+}
+
+h1, h2, h4, strong {
+	font-family: $font;
+
+}
+
+/* ---- fonts in Detail ----- */
+
+
+h1 {
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+	
+	padding-top: 1.8rem;
+	padding-bottom: 0.8rem;
+	
+	@include mobile {
+		font-size: 1.8rem;
+		line-height: 2.7rem;	
+		
+		padding-top: 1.8rem;
+	 	padding-bottom: 0.8rem;
+	}
+} 
+
+h2 {
+	font-size: 1.2rem;//h2
+	line-height: 1.4rem;	
+	
+	padding-top: 0.6rem;
+	 padding-bottom: 1.2rem;
+	
+
+	@include mobile {
+		font-size: 1.2rem;
+		line-height: 1.4rem;
+		
+		padding-top: 1.2rem;
+	 	padding-bottom: 0.6rem;
+	}
+}
+
+h3 {
+	font-size: 1.1rem;//h3
+	line-height: 1.3rem;
+	
+	@include mobile {
+		font-size: 1.4rem;
+		line-height: 3.6rem;	
+	}
+} 
+
+h4 { // 13px/ 21px
+	font-size: 1.6153rem;//h4 
+	line-height: 1.5rem;
+	font-weight: 600;
+	
+
+	@include mobile {
+		font-size: 1.3rem ;
+		line-height: 2.7rem;	
+		font-weight: 600;
+	}
+} 
+
+/* ---- General ---- */
+body, html{
+	font-family: $font;
+	font-size: $font-base;
+	width: 100%;
+	height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+
+
+
+main {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+video {  
+   width:100%; 
+   height:auto; 
+}

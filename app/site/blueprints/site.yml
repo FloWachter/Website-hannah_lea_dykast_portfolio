@@ -1,0 +1,42 @@
+title: Site
+pages: true
+fields:
+  title:
+    label: Title
+    type:  text
+  text:
+    label: text
+    type: textarea
+  line1:
+    label: SEO
+    type: line
+  description:
+    label: Description
+    type: textarea
+  author:
+    label: Author
+    type:  text
+  keywords:
+    label: Keywords
+    type:  tags
+    width: 1/2
+  gaid:
+    label: Google Analytics ID
+    type: text
+    help: 'UA-XXXXX-Y'
+    width: 1/2
+  line2:
+    label: Icons
+    type: line
+  favicon:
+    label: Favicon
+    type: select
+    options: files
+    help: Select your .ico or .png file
+    width: 1/2
+  logo:
+    label: Logo
+    type:  image
+  burgermenu:
+    label: Burger Menu
+    type:  image

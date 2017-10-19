@@ -1,0 +1,33 @@
+Title: Hanna lea Dykast
+
+----
+
+Text: 
+
+----
+
+Description: Hanna lea Dykast Portfolio
+
+----
+
+Author: Florian Wachter
+
+----
+
+Keywords: Interaction Design,Florian Wachter
+
+----
+
+Gaid: 
+
+----
+
+Favicon: favicon.ico
+
+----
+
+Logo: logo_34x34.svg
+
+----
+
+Burgermenu: burger_menu_34x34.svg

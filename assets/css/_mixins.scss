@@ -1,0 +1,144 @@
+//--------------------------------------------------------------
+// Responsive Design
+//--------------------------------------------------------------
+$bp-sm: 480px;
+$bp-md: 980px;
+$bp-lg: 1024px;
+
+@mixin mobile { //land and portai
+  @media only screen and (max-width: $bp-sm ) {
+    @content;
+  }
+}
+
+@mixin tablet { //land and portai
+  @media only screen and (min-width: $bp-sm ) and (max-width: $bp-md ) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $bp-md ) {
+    @content;
+  }
+}
+
+//--------------------------------------------------------------
+// Transitions
+//-------------------------------------------------------------
+
+@mixin easeCircle( $time, $obj ) {
+  transition: $obj $time cubic-bezier(.34,.76,.34,.76); 
+}
+
+@mixin rotation( $time, $obj ) {
+  transition: $obj $time cubic-bezier(0.215, 0.61, 0.355, 1); 
+}
+
+@mixin fade-out( $time, $obj ) { // easeOutQuart
+  transition: $obj $time cubic-bezier(0.165, 0.84, 0.44, 1); 
+}
+
+@mixin fade-in( $time, $obj ) { //easeInQuart
+  transition: $obj $time cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@mixin move( $time, $obj ) { //easeInOutQuart
+  transition: $obj $time cubic-bezier(0.455, 0.03, 0.515, 0.955); 
+}
+@mixin move-in( $time, $obj ) { //easeInOutQuart
+  transition: $obj $time cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+//cubic-bezier(0.23, 1, 0.32, 1) --> move in
+
+//--------------------------------------------------------------
+// clearFix
+//--------------------------------------------------------------
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+//--------------------------------------------------------------
+// Shadows
+//--------------------------------------------------------------
+
+@mixin shadow-1 { // for blind people
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,0.12), 0 3px 8px 0 rgba(0,0,0,0.24);
+}
+@mixin shadow-2 { // for blind people
+  box-shadow: 0 9px 24px 0 rgba(0,0,0,0.12), 0 9px 24px 0 rgba(0,0,0,0.23);
+}
+
+//--------------------------------------------------------------
+// layout
+//--------------------------------------------------------------
+// @mixin module {
+//   position: relative;
+//   display: block;
+//   height: auto;
+//   width: 100%;
+// }
+
+// @mixin site-width {
+//   width: 940px;
+//   margin: 0 auto;
+// }
+
+// @mixin size($width, $height) {
+//   width: $width;
+//   height: $height;
+// }
+
+//--------------------------------------------------------------
+// controller is-visible/ is-active
+//--------------------------------------------------------------
+@mixin hidden { // for blind people
+  display: none;
+  height: 0;
+  overflow: hidden;
+}
+
+@mixin hide {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  @include fade-in(450ms, height);
+}
+
+@mixin show {
+  height: auto;  
+  overflow: none !important;
+  opacity: 1;
+  top: 0vw;
+  @include fade-out(450ms, height);
+}
+
+//--------------------------------------------------------------
+// Icons
+//-------------------------------------------------------------
+@mixin icon($path, $w, $h, $top, $left) {
+  position: relative;
+  display: inline-block;
+  height: $w;
+  width: $h;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $w;
+    height: $h;
+    background-repeat: no-repeat;
+    background-image: url($path);
+  }
+}
