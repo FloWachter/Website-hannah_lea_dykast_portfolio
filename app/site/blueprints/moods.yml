@@ -1,0 +1,11 @@
+title: Mood
+pages: false
+files: false
+fields:
+  title:
+    label: Titel
+    type: text
+  website:
+    label: Mood Website
+    type: url
+    width: 1/2

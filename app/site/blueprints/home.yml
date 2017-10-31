@@ -8,3 +8,21 @@ fields:
   curtain:
     label: Curtain Image
     type:  image
+  pinterest:
+    label: Pinterest Weblink
+    type: url
+    placeholder: ...
+    icon: pinterest
+    width: 1/2
+  linkedin:
+    label: Linkedin Weblink
+    type: url
+    placeholder: ...
+    icon: linkedin
+    width: 1/2
+  instagram:
+    label: Instagram Weblink
+    type: url
+    placeholder: ...
+    icon: instagram
+    width: 1/2

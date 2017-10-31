@@ -5,6 +5,14 @@ $white: #fff;
 $grey: #494747;
 $light-grey: #F8F8F8;
 
+// Triangle colors
+
+$blue: #889CCE;
+$tuerkis: #7ac2c4;
+$grey-blue: #99adae;
+$grey-medium: #cacac7;
+$besch: #dcceb2;
+$red-light: #f79f80;
 
 
 /* --- Fonts --- */
@@ -20,6 +28,14 @@ $font: "TheSans_400", sans-serif;//semilight
 $column-gap: 1.6153rem; //45px;
 $column-gap-mobile: 1.6153rem; //24px;
 $screen-width: 1280px;
+
+// section {
+// 	padding-top: $column-gap;
+// 	padding-bottom: $column-gap;
+// }
+
+
+
 
 
 /* ---- Format -----*/
@@ -135,7 +151,7 @@ html {
 
 body {
 
-    opacity: 0;
+    opacity: 1;
     background-color: $light-grey;
 }
 

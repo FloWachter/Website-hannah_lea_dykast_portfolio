@@ -1,0 +1,9 @@
+title: Discipline
+pages: true
+  template:
+    - project
+files: false
+fields:
+  title:
+    label: Titel
+    type: text

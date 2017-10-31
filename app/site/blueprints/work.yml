@@ -1,0 +1,10 @@
+title: work
+pages: true
+  template:
+    - discipline
+  sort: noOfChildren desc
+files: false
+fields:
+  title:
+    label: Titel
+    type: text

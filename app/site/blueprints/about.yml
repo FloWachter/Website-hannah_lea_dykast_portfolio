@@ -1,0 +1,27 @@
+title: About
+pages: false
+files: true
+  type: document
+fields:
+  title:
+    label: Title
+    type: title
+  text:
+    label: Text
+    type: textarea
+  name:
+    label: Name
+    type: text
+    width: 1/2
+  profession:
+    label: Profession Title
+    type: text
+    width: 1/2
+  email:
+    label: Email
+    type: email
+    width: 1/2
+  download:
+    label: CV Download File
+    type: select
+    options: files  

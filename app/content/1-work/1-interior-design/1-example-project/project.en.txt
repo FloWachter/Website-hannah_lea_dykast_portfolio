@@ -1,0 +1,13 @@
+Title: Example Project
+
+----
+
+Text: 
+
+----
+
+Year: 
+
+----
+
+Website: 

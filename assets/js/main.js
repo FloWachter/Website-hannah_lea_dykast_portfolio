@@ -2,22 +2,21 @@
     $(document).ready(function() {
 
 <!-- Onload  -->
-    	$("body").delay(1000).animate({ opacity: 1 }, 800);​
+    	// $("body").animate({ opacity: 1 }, 0);​
 <!-- curtain -->
     	
-    	$('.curtain').one('click', function(event) {
-    		event.preventDefault();
-    		$el = $(this);
-			  	$('.curtain').animate({top:$(".curtain").height()}, 900, 
-			  	function() {
-					console.log('remove curtain');
-					$el.remove();
-
-					$(".menu").delay(500).addClass('is-active');
-                    //coneccted to curton fktionallity
-                    $(".main--container").addClass('is-active');
-			});
-    	});
+	$('.curtain').one('click', function(event) {
+		event.preventDefault();
+		$el = $(this);
+		  	$('.curtain').animate({top:$(".curtain").height()}, 900, 
+		  	function() {
+				console.log('remove curtain');
+				$el.remove();
+				$(".menu").addClass('is-active');
+                //coneccted to curton fktionallity
+                $(".main--container").addClass('is-active');
+		});
+	});
 
 <!-- curtain ende-->
 
